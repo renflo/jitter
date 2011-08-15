@@ -1,19 +1,25 @@
 
+html {
+    height:100%;
+    background:-webkit-gradient(linear,left bottom,left top,color-stop(0.42, rgb(138,164,209)),color-stop(0.67, rgb(126,142,191))) no-repeat;
+    background:-moz-linear-gradient(center bottom,rgb(138,164,209) 42%,rgb(126,142,191) 67%) no-repeat;
+}
+
 #twitter_update_list li {
-list-style-type: none;
+    list-style-type: none;
 }
 
 #twitter_update_list span {
-color: #FFCC00;
-background: #000000;
+    color: #FFCC00;
+    background: #000000;
 }
 #twitter_update_list span a {
-display: inline;
-color: #000000;
+    display: inline;
+    color: #000000;
 }
 
 #twitter_update_list span a:hover {
-text-decoration: underline;
-color: #666666;
+    text-decoration: underline;
+    color: #666666;
 }
 

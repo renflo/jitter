@@ -3,11 +3,13 @@ body {
     height:100%;
     margin: 0px;
     padding: 0px;
-	font: normal 1em Arial, Helvetica, sans-serif;
-    background: url(bg.png) no-repeat;
-    /*background:-webkit-gradient(linear,left bottom,left top,color-stop(0.42, rgb(142,193,218)),color-stop(0.67, rgb(192,222,237))) no-repeat;
-    background:-moz-linear-gradient(center bottom,rgb(142,193,218) 42%,rgb(192,222,237) 67%) no-repeat;*/
+	font: normal 0.8em Arial, Helvetica, sans-serif;
+    background: url(../images/bg-clouds.png) no-repeat;
     background-color: rgb(192,222,237);
+}
+
+a {
+    color: rgba(0, 132, 180, 0.85);
 }
 
 ul, li {
@@ -24,12 +26,15 @@ ul, li {
 #tweet {
     padding: 10px;
     
-    color: #fff;
+    color: rgba(4, 101, 154, 0.6);
     background: rgba(255, 255, 255, 0.15);
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
     
     -webkit-border-radius: 14px;
     -moz-border-radius: 14px;
     border-radius: 14px;
+    background:-webkit-gradient(linear,left bottom,left top,color-stop(0.42, rgba(255,255,255,0.50)),color-stop(0.93, rgba(232,232,232,0.50))) no-repeat;
+    background:-moz-linear-gradient(center bottom,rgb(255,255,255,0.50) 42%,rgb(232,232,232,0.50) 93%) no-repeat;
     
     display: -webkit-box;
     -webkit-box-orient: horizontal;
@@ -39,34 +44,25 @@ ul, li {
     box-orient: horizontal;
 }
 
-#tweet section{
-}
-
 #tweet aside div {
     height: 100%;
     padding: 5px;
     margin: 5px;
-    border: 1px solid #ddd;
+    background-color:rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(4, 101, 154, 0.6);
+}
+
+#tweet aside div img{
+    max-height:50px;
 }
 
 #tweet_details {
 }
     
 #tweet_user_screen_name{
-    color: rgba(255, 255, 255, 0.75);
-    font: bold 0.8em "Lucida Console", Monaco, monospace;
-}
-
-#tweet_user_name{
-    font: normal 0.8em Arial, Helvetica, sans-serif;
-    color: rgba(255, 255, 255, 0.75);
-}
-
-#tweet_text{    
-    font: normal 0.8em Arial, Helvetica, sans-serif;
+    font: bold 0.9em "Lucida Console", Monaco, monospace;
 }
 
 #tweet section footer{
     font: normal 0.6em Arial, Helvetica, sans-serif;
-    color: rgba(255, 255, 255, 0.5);
 }

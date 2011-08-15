@@ -3,44 +3,32 @@
 <html>
     <head>
         <title>Twitter - Ladygaga</title>
+        <!-- This app´s CSS -->
         <link rel="stylesheet" href="jitter.css" />
-        <script src="http://twitterjs.googlecode.com/svn/trunk/src/twitter.min.js" 
-                type="text/javascript">
-        </script>
-        <script type="text/javascript" charset="utf-8">
-                getTwitters('tweets', { 
-                            id: 'johncleese', 
-                            count: 10, 
-                            enableLinks: true, 
-                            ignoreReplies: true, 
-                            clearContents: true,
-                            template: 
-                            '\
-                                <article id="tweet"> \
-                                    <aside>\
-                                        <div><a href="http://twitter.com/%user_screen_name%/statuses/%id_str%/"><img src="%user_profile_image_url%" alt="Profile image for %user_screen_name%"/></a></div>\
-                                    </aside>\
-                                    <section>\
-                                        <header>\
-                                            <span id="tweet_user_screen_name">@%user_screen_name%</span><span id="tweet_user_name"> : : : %user_name%</span>\
-                                        </header>\
-                                        <section>\
-                                            <p>%text%</p>\
-                                        </section>\
-                                        <footer>\
-                                            %time%\
-                                        </footer>\
-                                    </section>\
-                                </acticle>\
-                            '
-                });
-        </script>
+        
+        <!-- jQuery used among other things for reading the html tweet template -->
+        <script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+        
+        <!-- The javascript to interact with the twitter api -->
+        <script src="http://twitterjs.googlecode.com/svn/trunk/src/twitter.min.js" ></script>
+        
+        <!-- This app´s javascript -->
+        <script src="jitter.js"></script>
     </head>
     
     <body>
-        <div id="tweets">
-            <p>Please wait while the tweets load... <img src="/ajax-loader.gif" /></p>
-        </div>
+        <section id="public_timeline_drilldown">
+            <header>
+                Public Timeline Drilldown
+            </header>
+            <section id="tweets">
+                <!-- Placeholder, will be removed when the tweets are received -->
+                <p>Please wait while the tweets load... <img src="../images/ajax-loader.gif" /></p>
+            </section>
+            <footer>
+                Bouvet
+            </footer>
+        <section>
     </body>
     
 </html>

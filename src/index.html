@@ -8,19 +8,37 @@
                 type="text/javascript">
         </script>
         <script type="text/javascript" charset="utf-8">
-                getTwitters('tweet', { 
+                getTwitters('tweets', { 
                             id: 'ladygaga', 
-                            count: 1, 
+                            count: 10, 
                             enableLinks: true, 
                             ignoreReplies: true, 
                             clearContents: true,
-                            template: '"%text%" <a href="http://twitter.com/%user_screen_name%/statuses/%id_str%/">%time%</a>'
+                            template: 
+                            '\
+                                <article id="tweet"> \
+                                    <aside>\
+                                        <div><a href="http://twitter.com/%user_screen_name%/statuses/%id_str%/"><img src="%user_profile_image_url%" alt="Profile image for %user_screen_name%"/></a></div>\
+                                    </aside>\
+                                    <section>\
+                                        <header>\
+                                            <span id="tweet_user_screen_name">@%user_screen_name%</span><span id="tweet_user_name"> : : : %user_name%</span>\
+                                        </header>\
+                                        <section>\
+                                            <p id="tweet_text">%text%</p>\
+                                        </section>\
+                                        <footer>\
+                                            %time%\
+                                        </footer>\
+                                    </section>\
+                                </acticle>\
+                            '
                 });
         </script>
     </head>
     
     <body>
-        <div id="tweet">
+        <div id="tweets">
             <p>Please wait while the tweets load... <img src="/ajax-loader.gif" /></p>
         </div>
     </body>

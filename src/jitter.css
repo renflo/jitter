@@ -12,21 +12,11 @@ a {
     color: rgba(0, 132, 180, 0.85);
 }
 
-ul, li {
-	list-style: none;
-	padding: 0px;
-	margin: 0px;
-}
-
 /*****************************
  * Public timeline drilldown *
  *****************************/
+ 
 #public_timeline_drilldown > header{
-    position:fixed;
-    left:0px;
-    right:0px;
-    top:0px;
-    width:100%;    
     background-color: #b0bccd;
     background-image: -webkit-gradient(linear, left top, left bottom,
         from(#b0bccd),
@@ -49,11 +39,6 @@ ul, li {
 }
 
 #public_timeline_drilldown > footer {
-    position:fixed;
-    left:0px;
-    right:0px;
-    bottom:0px;
-    width:100%;    
     background-color: #b0bccd;
     background-image: -webkit-gradient(linear, left top, left bottom,
         from(#b0bccd),
@@ -68,15 +53,21 @@ ul, li {
     letter-spacing: -1px;
     text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.5);
     margin: 0px;
+    
+}
+
+#public_timeline_drilldown > footer img{
+    max-height:30px;
 }
 
 /**********
  * Tweets *
  **********/
 
-#tweets li {
+#tweets ul, li {
     padding: 3px;
     margin: 3px;
+    list-style: none;
 }
 
 /*********

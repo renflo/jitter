@@ -24,9 +24,11 @@ function getPublicTimeLine(options) {
     $.getJSON(options.queryUrl, function(json) {
         // this is where we can loop through the results in the json object
         // Convert the markup string into a named template
-        $(options.target).html('<ul>');
+        var list = $(options.target).html('<ul id="generated_list" data-role="listview" data-theme="g"></ul>').find('ul');;
         var toAppend = $.tmpl("publicTimelineTemplate", json);
-        $(options.target).append(toAppend);
-        $('</ul>').appendTo(options.target);
+        list.append(toAppend);
+    })
+    .complete(function() {
+        $('#generated_list').listview();
     });
 }

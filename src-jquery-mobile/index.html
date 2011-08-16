@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>Jitter</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+        <!-- This app´s CSS -->
+        <link rel="stylesheet" href="jitter-jquery-mobile.css" />
+
+        <!-- jQuery mobile stuff -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.css" />
+    	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+    	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.js"></script>
+    
+        <!-- This app´s javascript -->
+        <script src="../src/jitter-jquery-mobile.js"></script>
+
+    </head>
+    
+    <body>
+        <!-- Public timeline -->   
+        <div id="public_timeline" data-role="page"  data-title="Public timeline"> 
+            <div data-role="header">
+    	        <h1>Public timeline</h1>
+                <a href="index.html" data-icon="refresh" class="ui-btn-right">Refresh</a>
+        	</div>
+        
+        	<div id="tweets" data-role="content">	
+                <p>Downloading...</p>    	
+	            <p>View internal page called <a href="#user_at_twitter">checkout the user on twitter.com</a></p>                                
+            </div>
+        
+        	<div id="footer" data-role="footer">
+                <h1><img src="http://a0.twimg.com/a/1313433970/images/logos/twitter_newbird_white.png"/></h1>
+        	</div>
+        </div> 
+        
+        <!-- Users timeline -->   
+        <div id="user_at_twitter" data-role="page" data-title="User at twitter.com"  data-add-back-btn="true">
+            <div data-role="header">
+    	        <h1>User at twitter.com</h1>
+                <a href="index.html" data-icon="refresh" class="ui-btn-right">Refresh</a>
+            </div>
+
+    	    <div data-role="content">	
+                <p>Downloading...</p>        
+	        </div>
+
+        	<div id="footer" data-role="footer">
+                <h1><img src="http://a0.twimg.com/a/1313433970/images/logos/twitter_newbird_white.png"/></h1>
+	        </div>
+        </div>
+    </body>
+    
+</html>

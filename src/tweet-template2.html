@@ -1,0 +1,22 @@
+<li>
+    <article id="tweet">
+        <aside>
+            <div>
+                <a href="http://twitter.com/${user.screen_name}/statuses/${user.id_str}/">
+                    <img src="${user.profile_image_url}" alt="Profile image for ${user.screen_name}"/>
+                </a>
+            </div>
+        </aside>
+        <section>
+            <header>
+                <span id="tweet_user_screen_name">@${user.screen_name}</span><span id="tweet_user_name"> : : : ${user.name}</span>
+            </header>
+            <section>
+                <p>${text}</p>
+            </section>
+            <footer>
+                ${created_at}
+            </footer>
+        </section>
+    </acticle>
+</li>

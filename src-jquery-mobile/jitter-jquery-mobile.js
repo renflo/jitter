@@ -1,3 +1,15 @@
+// Chrome will have to be started with --allow-file-access-from-files
+// This fixes the SOP for firefox
+if (navigator.userAgent.indexOf("Firefox") != -1) {
+    try {
+        netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead");
+    } 
+    catch (e) {
+        alert("Permission UniversalBrowserRead denied -- not running Mozilla?");
+    }
+}
+
+
 // Check for the various File API support.
 if (window.File && window.FileReader && window.FileList && window.Blob) {
     // Great success! All the File APIs are supported.
